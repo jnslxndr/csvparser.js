@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      
+      <!-- ================ -->
+      <!-- = Dependencies = -->
+      <!-- ================ -->
+      <script src="lib/jquery.min.js"></script>
+      <script src="lib/dropperpasterfiler.all.min.js"></script>
+      
+      <!-- =========== -->
+      <!-- = Plugins = -->
+      <!-- =========== -->
+      <script src="build/csvparser.all.min.js"></script>
+      
+      <!-- ==================== -->
+      <!-- = Scripts & Styles = -->
+      <!-- ==================== -->
+      <script src="js/script.js"></script>
+      <link rel="stylesheet" href="css/styles.css">
+    
+      <!-- ================= -->
+      <!-- = The Templates = -->
+      <!-- ================= -->
+      <script id="address-preview" type="text/template">
+        <div class="address">
+          <h2 class="Firmenname">${firmenname}:</h2>
+          <ul>
+            <li>
+              <ul>
+                <li class="Haendlerkennung">${haendlerkennung}</li>
+                <li class="Ansprechpartner">${ansprechpartner}</li>
+                <li class="StrasseHausnummer">${strassehausnummer}</li>
+                <li class="PLZ">${plz}</li>
+                <li class="Stadt">${stadt}</li>
+                <li class="Land">${land} (${laenderkennung})</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li class="Telefon">${telefon}</li>
+                <li class="Fax">${fax}</li>
+                <li class="Internetadresse">${internetadresse}</li>
+                <li class="Emailadresse">${emailadresse}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </script>
+    
+    </head>
+    <body>
+      <div id="settings" class="">
+        <input type="checkbox" name="debug" value="" class="debug">
+      </div>
+      <div id="pastehere">
+        <h1>Click here and hit <code>strg/cmd + v</code> to paste</h1>
+      </div>
+      <hr/>
+      <div id="drophere">
+        <h1>Drop a File here</h1>
+      </div>
+      <hr/>
+      <div id="filehere">
+        <h1>Click here to select a file</h1>
+      </div>
+      <hr/>
+      <div>
+        <button type="prev" id="prev">prev page</button>
+        <button type="next" id="next">next page</button>
+        <span id="pagenum"></span>
+      </div>
+      <table>
+        <caption>Results from CSV Parsing</caption>
+        <!-- Here should go the first rwo or colums, if given -->
+        <!-- <thead>
+          <tr>
+            <th>Results</th>
+          </tr>
+        </thead> -->
+        <tbody id="results">
+          
+        </tbody>
+      </table>
+    </body>
+  </html>

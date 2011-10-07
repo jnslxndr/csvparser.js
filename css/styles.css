@@ -1,0 +1,77 @@
+/* @override
+	http://sketches/html/paster/styles.css */
+
+*{padding:0;margin:0;}
+
+body {width: 100%; height: 100%;}
+
+table
+{
+  border: 1px solid gray;
+  margin: .5em;
+}
+
+
+
+.paster,
+.dropper,
+.filer
+{
+	cursor: pointer;
+	margin: .5em;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	text-align: center;
+	color: #aaa;
+	text-shadow: 1px 1px 0px #E3E3E3;
+	font-family: sans-serif;
+	padding: 1em;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 5px dashed #efefef;
+	white-space: nowrap;
+	text-transform: uppercase;
+	opacity: 1;
+}
+.paster.ready{
+  border-color: yellow;
+}
+
+/* =========== */
+/* = Dropper = */
+/* =========== */
+
+.dropper.dragover
+{
+  border-color: orange;
+  cursor: s-resize; /* cursor arrwo down */
+}
+.dropper.success
+{
+  border-color: green;
+}
+
+/* ========= */
+/* = Filer = */
+/* ========= */
+.filer:hover,
+.dropper:hover,
+.paster:hover
+{
+  border-color: hsl(33, 100%, 50%);
+  background-color: hsla(0, 100%, 95%, 0.5);
+}
+.filer.success
+{
+  border-color: green;
+}
+.filer.loaded
+{
+  border-color: orange;
+}
+.filer.unsupported
+{
+  text-decoration: line-through;
+  cursor: none;
+}
